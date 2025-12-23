@@ -1,0 +1,106 @@
+# packages/markitdown/src/markitdown/converters/_csv_converter.py
+
+**[← Back to Parent Directory](./README.md)**
+
+---
+
+<details>
+<summary>📊 Documentation Metadata (click to expand)</summary>
+
+```json
+{
+  "source_file": "packages/markitdown/src/markitdown/converters/_csv_converter.py",
+  "file_hash": "b796945fb1a449d8199d46b84627cac951f43e40472ba09df8384a6269e111df",
+  "last_updated": "2025-12-23T15:49:02.539518+00:00",
+  "functions": {
+    "CsvConverter": {
+      "hash": "eaf6f9f2b517237b8bab5698310eaeb623eacfe515a51dcb652208f3f05157ac",
+      "lines": "15-78",
+      "last_updated": "2025-12-23T15:49:02.539394+00:00"
+    }
+  }
+}
+```
+
+</details>
+
+
+
+The Python file `packages/markitdown/src/markitdown/converters/_csv_converter.py` implements a CSV converter class, `CsvConverter`, which is responsible for converting CSV files into Markdown table format. The class inherits from `DocumentConverter` and includes methods to check file compatibility and perform the conversion. It specifically handles files with MIME types prefixed by "text/csv" or "application/csv" and files with the ".csv" extension.
+
+The `CsvConverter` class contains two main methods: `accepts` and `convert`. The `accepts` method determines if the provided file stream and its associated metadata (MIME type and file extension) are suitable for conversion based on predefined accepted MIME types and file extensions. The `convert` method reads the content of the CSV file, parses it using Python's built-in `csv` module, and constructs a Markdown table from the parsed data. The resulting Markdown table is returned encapsulated in a `DocumentConverterResult` object.
+
+The file imports several modules, including `csv`, `io`, and `charset_normalizer`, as well as types from the `typing` module. It also imports `DocumentConverter` and `DocumentConverterResult` from a parent module, indicating a dependency on the base converter functionality. The code manipulates data structures such as lists to store rows of the CSV and the resulting Markdown table, and it utilizes the `StreamInfo` class to access metadata about the file being processed.
+
+## Functions and Classes
+
+## `CsvConverter`
+
+**Location:** [`packages/markitdown/src/markitdown/converters/_csv_converter.py:15`](/packages/markitdown/src/markitdown/converters/_csv_converter.py#L15-L78)
+
+# CsvConverter Documentation
+
+## Class Overview
+`CsvConverter` is a subclass of `DocumentConverter` that converts CSV files into Markdown tables.
+
+## Method: accepts
+
+### Description
+The `accepts` method determines if the provided file stream and stream information are acceptable for conversion based on file extension and MIME type.
+
+### Parameters
+- `file_stream` (BinaryIO): A binary stream representing the file content.
+- `stream_info` (StreamInfo): An object containing metadata about the file, including:
+  - `mimetype` (str): The MIME type of the file.
+  - `extension` (str): The file extension.
+- `**kwargs` (Any): Additional options to pass to the converter.
+
+### Returns
+- `bool`: Returns `True` if the file's extension or MIME type is accepted, otherwise returns `False`.
+
+### Logic
+- The method checks if the file extension is in `ACCEPTED_FILE_EXTENSIONS`.
+- If not, it checks if the MIME type starts with any prefix in `ACCEPTED_MIME_TYPE_PREFIXES`.
+
+## Method: convert
+
+### Description
+The `convert` method reads the content of a CSV file and converts it into a Markdown table format.
+
+### Parameters
+- `file_stream` (BinaryIO): A binary stream representing the CSV file content.
+- `stream_info` (StreamInfo): An object containing metadata about the file, including:
+  - `charset` (str): The character set to decode the file content.
+- `**kwargs` (Any): Additional options to pass to the converter.
+
+### Returns
+- `DocumentConverterResult`: An object containing the converted Markdown table as a string in the `markdown` attribute.
+
+### Logic
+1. Reads the content of the `file_stream`, decoding it using the specified `charset` if available; otherwise, it uses a default conversion.
+2. Parses the CSV content using `csv.reader`.
+3. Constructs a Markdown table:
+   - Adds the header row.
+   - Adds a separator row.
+   - Adds data rows, ensuring that each row has the same number of columns as the header.
+4. Returns the Markdown table as a string.
+
+## Dependencies
+- `csv`: Standard library module used for reading CSV files.
+- `io`: Standard library module used for handling streams.
+- `from_bytes`: Presumably a utility function (not defined in the provided code) used for converting bytes to a string.
+- `DocumentConverterResult`: Presumably a class (not defined in the provided code) that encapsulates the conversion result.
+
+## Usage Example
+```python
+converter = CsvConverter()
+if converter.accepts(file_stream, stream_info):
+    result = converter.convert(file_stream, stream_info)
+    markdown_output = result.markdown
+```
+
+---
+
+
+---
+*This documentation was automatically generated by AI (Woden DocBot) and may contain errors. It is the responsibility of the user to validate the accuracy and completeness of this documentation.*
