@@ -1,0 +1,117 @@
+# packages/markitdown/src/markitdown/_stream_info.py
+
+**[← Back to Parent Directory](./README.md)**
+
+---
+
+<details>
+<summary>📊 Documentation Metadata (click to expand)</summary>
+
+```json
+{
+  "source_file": "packages/markitdown/src/markitdown/_stream_info.py",
+  "file_hash": "039bce7e9d0c5e62a6ed55ac6133e7fa530d7025a2ed8372e35538b072f6dbdf",
+  "last_updated": "2025-12-23T15:46:54.036662+00:00",
+  "functions": {
+    "StreamInfo": {
+      "hash": "da71b147298d2a65cda88b272af2b7ba885f0aca58cba6a581a4004bee12c172",
+      "lines": "6-33",
+      "last_updated": "2025-12-23T15:46:54.036563+00:00"
+    }
+  }
+}
+```
+
+</details>
+
+
+
+The Python file `packages/markitdown/src/markitdown/_stream_info.py` implements a single class, `StreamInfo`, which is designed to encapsulate information about a file stream. This class utilizes the `dataclass` decorator from the `dataclasses` module, allowing for the automatic generation of special methods like `__init__()` and `__repr__()`. The `StreamInfo` class contains several optional fields, including `mimetype`, `extension`, `charset`, `filename`, `local_path`, and `url`, all of which can be set to `None` depending on the context in which the stream is opened.
+
+The primary method defined within the `StreamInfo` class is `copy_and_update`, which allows for the creation of a new `StreamInfo` instance based on the current instance. This method accepts other `StreamInfo` instances and keyword arguments to update the fields of the new instance. The method ensures that only non-`None` values from the provided instances or keyword arguments are used to update the new instance. The file imports `Optional` from the `typing` module to specify that the fields can hold either a string value or `None`.
+
+The data structure defined in this file is the `StreamInfo` class itself, which serves as a structured representation of stream-related metadata. The fields within the class are of type `Optional[str]`, indicating that they can either hold a string value or `None`. The file does not interact with any external services or APIs, and its only dependencies are the `dataclasses` and `typing` modules from the Python standard library.
+
+## Functions and Classes
+
+## `StreamInfo`
+
+**Location:** [`packages/markitdown/src/markitdown/_stream_info.py:6`](/packages/markitdown/src/markitdown/_stream_info.py#L6-L33)
+
+# StreamInfo Class Documentation
+
+## Overview
+The `StreamInfo` class is designed to store information about a file stream. It contains several optional fields that can be set to `None` depending on how the stream was opened.
+
+## Attributes
+- `mimetype: Optional[str]`
+  - Represents the MIME type of the stream.
+  - Default value is `None`.
+
+- `extension: Optional[str]`
+  - Represents the file extension of the stream.
+  - Default value is `None`.
+
+- `charset: Optional[str]`
+  - Represents the character set used in the stream.
+  - Default value is `None`.
+
+- `filename: Optional[str]`
+  - Represents the filename derived from the local path, URL, or `Content-Disposition` header.
+  - Default value is `None`.
+
+- `local_path: Optional[str]`
+  - Represents the local file path if the stream is read from disk.
+  - Default value is `None`.
+
+- `url: Optional[str]`
+  - Represents the URL if the stream is read from a URL.
+  - Default value is `None`.
+
+## Method: copy_and_update
+### Description
+The `copy_and_update` method creates a new instance of `StreamInfo` by copying the current instance and updating it with values from other `StreamInfo` instances and/or additional keyword arguments.
+
+### Parameters
+- `*args`: 
+  - Variable length argument list.
+  - Each argument must be an instance of `StreamInfo`. The method asserts this condition.
+  
+- `**kwargs`: 
+  - Variable length keyword arguments.
+  - Each key-value pair updates the corresponding attribute in the new instance if the value is not `None`.
+
+### Return Value
+- Returns a new instance of `StreamInfo` populated with:
+  - Attributes from the current instance.
+  - Non-`None` attributes from each `StreamInfo` instance provided in `args`.
+  - Non-`None` values from `kwargs`.
+
+## Dependencies
+- The method uses the `asdict` function, which is assumed to be imported from the `dataclasses` module. This function converts the instance attributes into a dictionary.
+
+## Usage Example
+```python
+# Create an instance of StreamInfo
+stream_info = StreamInfo(mimetype='application/pdf', filename='document.pdf')
+
+# Create another instance to update from
+new_info = StreamInfo(extension='pdf', charset='utf-8')
+
+# Copy and update the original instance with the new instance
+updated_stream_info = stream_info.copy_and_update(new_info, local_path='/path/to/document.pdf')
+
+# The updated_stream_info will have:
+# - mimetype: 'application/pdf'
+# - extension: 'pdf'
+# - charset: 'utf-8'
+# - filename: 'document.pdf'
+# - local_path: '/path/to/document.pdf'
+# - url: None
+```
+
+---
+
+
+---
+*This documentation was automatically generated by AI (Woden DocBot) and may contain errors. It is the responsibility of the user to validate the accuracy and completeness of this documentation.*
