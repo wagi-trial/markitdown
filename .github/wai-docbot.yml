@@ -1,0 +1,257 @@
+# Woden DocBot Configuration
+# Place this file at: .github/wai-docbot.yml in your repository
+
+# ============================================================================
+# DOCUMENTATION FOLDER
+# ============================================================================
+# Where generated documentation will be stored in your repository
+# Default: "wai_docs"
+docs_folder: "wai_docs"
+
+# ============================================================================
+# BRANCH FILTERING
+# ============================================================================
+# Control which target branches trigger documentation generation
+# DocBot only processes PRs targeting these branches
+# Supports wildcard patterns (e.g., release/* matches release/1.0.0, release/v2.0)
+allowed_base_branches:
+  - "main"           # Primary branch
+  - "master"         # Alternative primary branch
+  - "develop"        # Development branch
+  - "release/*"      # Matches: release/1.0.0, release/v2.0, etc.
+  - "hotfix/*"       # Matches: hotfix/critical-bug, hotfix/security-patch
+  - "staging"        # Pre-production environment
+  - "wai-docs-update"  # Special branch name that triggers full repository rebuilds
+
+
+# ============================================================================
+# DOCUMENTATION PREFERENCES
+# ============================================================================
+preferences:
+  # Include clickable links to specific line numbers in your GitHub source code
+  # Makes it easy to jump from documentation to the actual code
+  include_code_links: true
+  
+  # Include usage examples and code snippets in function/class documentation
+  # AI generates practical examples showing how to use the code
+  include_examples: true
+
+  # Require manual approval before generating documentation on each PR
+  # Useful for large repos or when you want explicit control over token usage
+  # 
+  # When true: (default)
+  #   - DocBot posts an approval request comment on new PRs
+  #   - You must comment "/docbot-approve" to proceed with documentation
+  #   - Token estimate is shown before you approve
+  #
+  # When false:
+  #   - Documentation generates automatically when PRs are opened
+  #   - Faster workflow, ideal for active development
+  require_pr_approval: true
+  
+  # Create a dedicated README.md for root-level files (e.g., setup.py, main.py)
+  # These files often have special significance and deserve separate documentation
+  # The root README is automatically linked from the master documentation index
+  document_root_files: true
+
+# ============================================================================
+# FILE EXTENSION INCLUSION LIST
+# ============================================================================
+# ONLY files with these extensions will be documented
+# Provides explicit control and prevents accidental processing of data files
+# Add or remove extensions based on your project's needs
+include_extensions:
+  # Python
+  - ".py"
+  
+  # JavaScript/TypeScript
+  - ".js"
+  - ".jsx"
+  - ".ts"
+  - ".tsx"
+  - ".mjs"
+  - ".cjs"
+  
+  # Web
+  - ".html"
+  - ".css"
+  - ".scss"
+  - ".sass"
+  - ".less"
+  
+  # C/C++
+  - ".c"
+  - ".cpp"
+  - ".cc"
+  - ".cxx"
+  - ".h"
+  - ".hpp"
+  - ".hxx"
+  
+  # C#/.NET
+  - ".cs"
+  - ".vb"
+  - ".fs"
+  
+  # Java/Kotlin
+  - ".java"
+  - ".kt"
+  - ".kts"
+  
+  # Go
+  - ".go"
+  
+  # Rust
+  - ".rs"
+  
+  # Ruby
+  - ".rb"
+  
+  # PHP
+  - ".php"
+  
+  # Swift
+  - ".swift"
+  
+  # Shell scripts
+  - ".sh"
+  - ".bash"
+  - ".zsh"
+  - ".fish"
+  
+  # PowerShell
+  - ".ps1"
+  - ".psm1"
+  - ".psd1"
+  
+  # SQL
+  - ".sql"
+  
+  # R
+  - ".r"
+  - ".R"
+  
+  # Scala
+  - ".scala"
+  
+  # Dart
+  - ".dart"
+  
+  # Lua
+  - ".lua"
+
+  # Go
+  - ".go"
+  
+  # Infrastructure as Code
+  - ".tf"    # Terraform
+  - ".yaml"  # YAML (for Kubernetes, etc.)
+  - ".yml"   # YAML (for Kubernetes, etc.)
+  - ".bicep" # Bicep
+
+# ============================================================================
+# FILE/FOLDER EXCLUSION LIST
+# ============================================================================
+# Glob patterns for files and directories to EXCLUDE from documentation
+# Applied AFTER extension filtering above
+# Customize by adding your own patterns or removing defaults that don't apply
+exclude:
+  # Custom exclusions for this project (uncomment and modify as needed)
+  # - "iac/**"  # Infrastructure as code
+  
+  ## STANDARD EXCLUSIONS ##
+  
+  # Dependencies and package managers
+  - "node_modules/**"
+  - "vendor/**"
+  - "**/package-lock.json"
+  - "**/yarn.lock"
+  - "**/pnpm-lock.yaml"
+  - "**/composer.lock"
+  - "**/Gemfile.lock"
+  - "**/Pipfile.lock"
+  - "**/poetry.lock"
+  - "**/__pycache__/**"
+  - "**/*.pyc"
+  - "**/*.pyo"
+  - "**/*.pyd"
+  
+  # Build outputs and generated files
+  - "dist/**"
+  - "build/**"
+  - "**/build/**"
+  - "**/bin/**"
+  - "**/obj/**"
+  - "**/out/**"
+  - "**/target/**"
+  - "**/.next/**"
+  - "**/coverage/**"
+  - "**/.cache/**"
+  - "**/.parcel-cache/**"
+  - "**/.webpack/**"
+  - "**/.turbo/**"
+  
+  # Minified and bundled files
+  - "**/*.min.js"
+  - "**/*.min.css"
+  - "**/*.bundle.js"
+  - "**/*.bundle.css"
+  - "**/*.map"
+  - "**/*.chunk.js"
+  
+  # IDE and editor files
+  - ".git/**"
+  - ".gitignore"
+  - "**/.gitignore"
+  - ".gitattributes"
+  - "**/.gitattributes"
+  - "**/.idea/**"
+  - "**/.vscode/**"
+  - "**/.vs/**"
+  - "**/.DS_Store"
+  - "**/.history/**"
+  - "**/.settings/**"
+  - "**/.classpath"
+  - "**/.project"
+  - "**/*.swp"
+  - "**/*.swo"
+  - "**/*~"
+  
+  # Test coverage and cache
+  - "**/.pytest_cache/**"
+  - "**/.mypy_cache/**"
+  - "**/.ruff_cache/**"
+  - "**/__snapshots__/**"
+  - "**/htmlcov/**"
+  - "**/.nyc_output/**"
+  
+  # Environment and secrets
+  - "**/.env"
+  - "**/.env.*"
+  - "**/local.settings.json"
+  - "**/credential.json"
+  - "**/*.pem"
+  - "**/*.key"
+  - "**/*.p12"
+  - "**/*.crt"
+  - "**/*.cer"
+  - "**/secrets/**"
+  - "**/*.secret"
+  
+  # Existing documentation (prevents circular documentation)
+  - "**/*.md"
+  - "**/*.mdx"
+  - "docs/**"
+  - "wai_docs/**"
+  - "**/README"
+  - "**/CHANGELOG"
+  - "**/LICENSE"
+  
+  # Temporary and log files
+  - "**/*.log"
+  - "**/*.tmp"
+  - "**/*.temp"
+  - "**/tmp/**"
+  - "**/temp/**"
+  - "**/*.bak"
+  - "**/*.backup"
