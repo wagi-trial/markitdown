@@ -4,13 +4,13 @@
 
 ## 📋 Directory Overview
 
-This directory implements a pre-commit hook configuration that manages code formatting for Python projects using the Black tool. It provides automated code styling enforcement by specifying the version of Black and configuring the hook to format code according to established style guidelines upon each commit. This ensures consistent code quality and adherence to best practices across the development workflow.
+This directory implements a pre-commit hook configuration that manages code formatting by integrating the Black formatter into the development workflow. It provides a structured setup for ensuring consistent code style by executing the Black tool automatically before commits, thereby enhancing code quality and maintainability.
 
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[.pre-commit-config.yaml](.pre-commit-config.yaml.md)** - Documentation for .pre-commit-config.yaml
+- **[.pre-commit-config.yaml](.PRE-COMMIT-CONFIG.YAML.md)** - Documentation for .pre-commit-config.yaml
 
 ---
 
