@@ -4,7 +4,7 @@
 
 ## 📋 Directory Overview
 
-The `packages/markitdown/src/markitdown/converter_utils/docx` directory implements functionality for processing and converting DOCX files, specifically targeting the transformation of Office Math Markup Language (OMML) elements into LaTeX format. It manages the extraction and modification of XML content within DOCX files, ensuring that mathematical equations are accurately represented in LaTeX before re-packaging the files into the DOCX format. This directory provides essential utilities for integrating LaTeX representations into DOCX documents, enhancing their mathematical content capabilities.
+The `packages/markitdown/src/markitdown/converter_utils/docx` directory implements functionality for processing and converting DOCX files, specifically focusing on transforming Office Math Markup Language (OMML) elements into LaTeX format. It manages the manipulation of XML content within DOCX files, ensuring that mathematical expressions are accurately converted and integrated into the document structure. This directory provides essential tools for enhancing document compatibility and usability in LaTeX environments.
 
 ## 📁 Subdirectories
 
@@ -16,8 +16,8 @@ This directory contains the following subdirectories:
 
 This directory contains the following documented files:
 
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[pre_process.py](pre_process.py.md)** - Documentation for pre_process.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[pre_process.py](PRE_PROCESS.PY.md)** - Documentation for pre_process.py
 
 ---
 
