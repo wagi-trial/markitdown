@@ -4,14 +4,14 @@
 
 ## 📋 Directory Overview
 
-The `github/workflows` directory implements automated workflows for continuous integration and code quality management within GitHub. It manages the pre-commit checks and testing processes by defining workflows that trigger on pull request events, ensuring that code quality is maintained and that all tests are executed before merging changes into the main branch. Through these workflows, it provides a structured environment for code validation and testing, enhancing the overall development workflow.
+The `github/workflows` directory implements automated workflows for continuous integration and quality assurance within a GitHub repository. It manages pre-commit checks and testing processes by defining workflows that are triggered on pull requests, ensuring code quality through environment setup, dependency installation, and execution of pre-commit hooks and tests across multiple Python versions. This directory provides a structured approach to maintain code integrity and facilitate collaborative development.
 
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[pre-commit.yml](pre-commit.yml.md)** - Documentation for pre-commit.yml
-- **[tests.yml](tests.yml.md)** - Documentation for tests.yml
+- **[pre-commit.yml](PRE-COMMIT.YML.md)** - Documentation for pre-commit.yml
+- **[tests.yml](TESTS.YML.md)** - Documentation for tests.yml
 
 ---
 
