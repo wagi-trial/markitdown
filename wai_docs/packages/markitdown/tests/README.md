@@ -4,7 +4,7 @@
 
 ## 📋 Directory Overview
 
-The `packages/markitdown/tests` directory implements a comprehensive suite of tests for the `markitdown` package, ensuring the reliability and correctness of its functionalities. It manages various testing scenarios, including command-line interface validation, file type handling, and conversion processes, through structured test cases that utilize classes and functions to standardize input and expected outcomes. This directory provides essential coverage for both the core features and edge cases of the package, facilitating robust development and maintenance practices.
+The `packages/markitdown/tests` directory implements a comprehensive suite of tests for the `markitdown` package, ensuring the reliability and correctness of its functionalities. It provides structured test vectors for various file types, manages command-line interface (CLI) behavior validation, and handles unit tests for specific components such as the `DocumentIntelligenceConverter`. Collectively, these tests validate the package's ability to process different input formats, verify output correctness, and ensure robust error handling across multiple scenarios.
 
 ## 📁 Subdirectories
 
@@ -16,13 +16,13 @@ This directory contains the following subdirectories:
 
 This directory contains the following documented files:
 
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[_test_vectors.py](_test_vectors.py.md)** - Documentation for _test_vectors.py
-- **[test_cli_misc.py](test_cli_misc.py.md)** - Documentation for test_cli_misc.py
-- **[test_cli_vectors.py](test_cli_vectors.py.md)** - Documentation for test_cli_vectors.py
-- **[test_docintel_html.py](test_docintel_html.py.md)** - Documentation for test_docintel_html.py
-- **[test_module_misc.py](test_module_misc.py.md)** - Documentation for test_module_misc.py
-- **[test_module_vectors.py](test_module_vectors.py.md)** - Documentation for test_module_vectors.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[_test_vectors.py](_TEST_VECTORS.PY.md)** - Documentation for _test_vectors.py
+- **[test_cli_misc.py](TEST_CLI_MISC.PY.md)** - Documentation for test_cli_misc.py
+- **[test_cli_vectors.py](TEST_CLI_VECTORS.PY.md)** - Documentation for test_cli_vectors.py
+- **[test_docintel_html.py](TEST_DOCINTEL_HTML.PY.md)** - Documentation for test_docintel_html.py
+- **[test_module_misc.py](TEST_MODULE_MISC.PY.md)** - Documentation for test_module_misc.py
+- **[test_module_vectors.py](TEST_MODULE_VECTORS.PY.md)** - Documentation for test_module_vectors.py
 
 ---
 
