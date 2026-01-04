@@ -4,7 +4,7 @@
 
 ## 📋 Directory Overview
 
-The `.github` directory implements automated processes for dependency management and documentation generation within a GitHub repository. It manages dependency updates for GitHub Actions through Dependabot, ensuring that all dependencies remain current on a weekly schedule. Additionally, it provides configuration for the Woden DocBot, which automates the generation of documentation based on pull requests, facilitating streamlined documentation practices and enhancing project maintainability.
+The `.github` directory manages automated processes for dependency updates and documentation generation within a GitHub repository. It implements configuration settings for Dependabot to monitor and update dependencies, specifically focusing on GitHub Actions, while also providing a framework for the Woden DocBot to automate the creation and management of documentation. Together, these files streamline project maintenance and enhance documentation workflows, ensuring that both dependencies and documentation remain current and well-organized.
 
 ## 📁 Subdirectories
 
@@ -16,8 +16,8 @@ This directory contains the following subdirectories:
 
 This directory contains the following documented files:
 
-- **[dependabot.yml](dependabot.yml.md)** - Documentation for dependabot.yml
-- **[wai-docbot.yml](wai-docbot.yml.md)** - Documentation for wai-docbot.yml
+- **[dependabot.yml](DEPENDABOT.YML.md)** - Documentation for dependabot.yml
+- **[wai-docbot.yml](WAI-DOCBOT.YML.md)** - Documentation for wai-docbot.yml
 
 ---
 

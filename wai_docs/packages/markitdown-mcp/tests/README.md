@@ -2,17 +2,11 @@
 
 > Directory index for `packages/markitdown-mcp/tests`
 
-## 📋 Directory Overview
-
-Directory Summary: 
-
-The `packages/markitdown-mcp/tests` directory manages the testing framework for the `markitdown-mcp` project. It provides the necessary structure for organizing test cases and ensures compliance with licensing requirements through the inclusion of metadata in the `__init__.py` file. This directory is essential for maintaining code quality and validating functionality within the project.
-
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
 
 ---
 

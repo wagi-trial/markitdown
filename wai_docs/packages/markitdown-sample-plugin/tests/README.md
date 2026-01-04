@@ -4,14 +4,14 @@
 
 ## 📋 Directory Overview
 
-The `packages/markitdown-sample-plugin/tests` directory implements unit testing for the `markitdown_sample_plugin` module, specifically focusing on the functionality of the `RtfConverter` class. It provides a structured environment for validating the integration of the plugin with the `MarkItDown` framework through comprehensive test cases that assert the correctness of the conversion process. This directory manages the testing lifecycle, ensuring that the plugin operates as intended by verifying output against expected results.
+The `packages/markitdown-sample-plugin/tests` directory implements unit testing for the `markitdown_sample_plugin` module, specifically focusing on the functionality of the `RtfConverter` and `MarkItDown` classes. It provides a structured framework for verifying the correctness of these components through defined test cases, ensuring that the conversion processes and markdown functionalities operate as intended. Additionally, the directory includes licensing information to clarify the legal usage of its contents.
 
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[test_sample_plugin.py](test_sample_plugin.py.md)** - Documentation for test_sample_plugin.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[test_sample_plugin.py](TEST_SAMPLE_PLUGIN.PY.md)** - Documentation for test_sample_plugin.py
 
 ---
 

@@ -4,15 +4,15 @@
 
 ## 📋 Directory Overview
 
-The directory `packages/markitdown/tests/test_files` provides a collection of HTML documents designed for testing the rendering and functionality of web content formats. It implements structured layouts for various types of content, including a blog post and a Wikipedia-style page, ensuring that metadata, navigation, and content organization are effectively managed for optimal user experience and search engine visibility. This directory serves as a resource for validating the presentation and interaction of web documents within the Markitdown package.
+The directory `packages/markitdown/tests/test_files` implements a suite of HTML documents designed for testing and demonstrating various web content structures. It provides examples of blog posts and informational pages, enhancing SEO and social media visibility through the inclusion of metadata and Open Graph properties. Additionally, it manages the representation of complex content relationships and dependencies, ensuring clarity in code structure and workflow documentation.
 
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[test_blog.html](test_blog.html.md)** - Documentation for test_blog.html
-- **[test_serp.html](test_serp.html.md)** - Documentation for test_serp.html
-- **[test_wikipedia.html](test_wikipedia.html.md)** - Documentation for test_wikipedia.html
+- **[test_blog.html](TEST_BLOG.HTML.md)** - Documentation for test_blog.html
+- **[test_serp.html](TEST_SERP.HTML.md)** - Documentation for test_serp.html
+- **[test_wikipedia.html](TEST_WIKIPEDIA.HTML.md)** - Documentation for test_wikipedia.html
 
 ---
 

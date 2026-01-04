@@ -4,35 +4,35 @@
 
 ## 📋 Directory Overview
 
-The `packages/markitdown/src/markitdown/converters` directory implements a comprehensive suite of converters that handle the transformation of various document formats into Markdown. It provides specialized classes for converting audio, video, images, documents, and structured data formats such as CSV and Excel, ensuring that each type is processed according to its unique requirements. This directory manages the extraction of content and metadata from diverse sources, including HTML, RSS feeds, and Jupyter Notebooks, while maintaining the integrity of the original formatting wherever possible.
+The `packages/markitdown/src/markitdown/converters` directory implements a comprehensive suite of converters that handle the transformation of various document and media formats into Markdown. It provides specialized classes for converting audio, video, images, documents (such as PDF, DOCX, and CSV), and web content (including RSS feeds and Wikipedia pages), ensuring that each format is processed appropriately according to its unique characteristics. This directory manages the conversion logic, including format validation, content extraction, and Markdown formatting, facilitating seamless integration of diverse content types into a unified Markdown representation.
 
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[_audio_converter.py](_audio_converter.py.md)** - Documentation for _audio_converter.py
-- **[_bing_serp_converter.py](_bing_serp_converter.py.md)** - Documentation for _bing_serp_converter.py
-- **[_csv_converter.py](_csv_converter.py.md)** - Documentation for _csv_converter.py
-- **[_doc_intel_converter.py](_doc_intel_converter.py.md)** - Documentation for _doc_intel_converter.py
-- **[_docx_converter.py](_docx_converter.py.md)** - Documentation for _docx_converter.py
-- **[_epub_converter.py](_epub_converter.py.md)** - Documentation for _epub_converter.py
-- **[_exiftool.py](_exiftool.py.md)** - Documentation for _exiftool.py
-- **[_html_converter.py](_html_converter.py.md)** - Documentation for _html_converter.py
-- **[_image_converter.py](_image_converter.py.md)** - Documentation for _image_converter.py
-- **[_ipynb_converter.py](_ipynb_converter.py.md)** - Documentation for _ipynb_converter.py
-- **[_llm_caption.py](_llm_caption.py.md)** - Documentation for _llm_caption.py
-- **[_markdownify.py](_markdownify.py.md)** - Documentation for _markdownify.py
-- **[_outlook_msg_converter.py](_outlook_msg_converter.py.md)** - Documentation for _outlook_msg_converter.py
-- **[_pdf_converter.py](_pdf_converter.py.md)** - Documentation for _pdf_converter.py
-- **[_plain_text_converter.py](_plain_text_converter.py.md)** - Documentation for _plain_text_converter.py
-- **[_pptx_converter.py](_pptx_converter.py.md)** - Documentation for _pptx_converter.py
-- **[_rss_converter.py](_rss_converter.py.md)** - Documentation for _rss_converter.py
-- **[_transcribe_audio.py](_transcribe_audio.py.md)** - Documentation for _transcribe_audio.py
-- **[_wikipedia_converter.py](_wikipedia_converter.py.md)** - Documentation for _wikipedia_converter.py
-- **[_xlsx_converter.py](_xlsx_converter.py.md)** - Documentation for _xlsx_converter.py
-- **[_youtube_converter.py](_youtube_converter.py.md)** - Documentation for _youtube_converter.py
-- **[_zip_converter.py](_zip_converter.py.md)** - Documentation for _zip_converter.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[_audio_converter.py](_AUDIO_CONVERTER.PY.md)** - Documentation for _audio_converter.py
+- **[_bing_serp_converter.py](_BING_SERP_CONVERTER.PY.md)** - Documentation for _bing_serp_converter.py
+- **[_csv_converter.py](_CSV_CONVERTER.PY.md)** - Documentation for _csv_converter.py
+- **[_doc_intel_converter.py](_DOC_INTEL_CONVERTER.PY.md)** - Documentation for _doc_intel_converter.py
+- **[_docx_converter.py](_DOCX_CONVERTER.PY.md)** - Documentation for _docx_converter.py
+- **[_epub_converter.py](_EPUB_CONVERTER.PY.md)** - Documentation for _epub_converter.py
+- **[_exiftool.py](_EXIFTOOL.PY.md)** - Documentation for _exiftool.py
+- **[_html_converter.py](_HTML_CONVERTER.PY.md)** - Documentation for _html_converter.py
+- **[_image_converter.py](_IMAGE_CONVERTER.PY.md)** - Documentation for _image_converter.py
+- **[_ipynb_converter.py](_IPYNB_CONVERTER.PY.md)** - Documentation for _ipynb_converter.py
+- **[_llm_caption.py](_LLM_CAPTION.PY.md)** - Documentation for _llm_caption.py
+- **[_markdownify.py](_MARKDOWNIFY.PY.md)** - Documentation for _markdownify.py
+- **[_outlook_msg_converter.py](_OUTLOOK_MSG_CONVERTER.PY.md)** - Documentation for _outlook_msg_converter.py
+- **[_pdf_converter.py](_PDF_CONVERTER.PY.md)** - Documentation for _pdf_converter.py
+- **[_plain_text_converter.py](_PLAIN_TEXT_CONVERTER.PY.md)** - Documentation for _plain_text_converter.py
+- **[_pptx_converter.py](_PPTX_CONVERTER.PY.md)** - Documentation for _pptx_converter.py
+- **[_rss_converter.py](_RSS_CONVERTER.PY.md)** - Documentation for _rss_converter.py
+- **[_transcribe_audio.py](_TRANSCRIBE_AUDIO.PY.md)** - Documentation for _transcribe_audio.py
+- **[_wikipedia_converter.py](_WIKIPEDIA_CONVERTER.PY.md)** - Documentation for _wikipedia_converter.py
+- **[_xlsx_converter.py](_XLSX_CONVERTER.PY.md)** - Documentation for _xlsx_converter.py
+- **[_youtube_converter.py](_YOUTUBE_CONVERTER.PY.md)** - Documentation for _youtube_converter.py
+- **[_zip_converter.py](_ZIP_CONVERTER.PY.md)** - Documentation for _zip_converter.py
 
 ---
 

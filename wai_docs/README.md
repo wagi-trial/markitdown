@@ -4,7 +4,7 @@
 
 ## 🎯 Project Overview
 
-The **MarkItDown** project implements a robust framework for converting diverse document formats and web content into Markdown, streamlining the transformation process through a command-line interface and plugin architecture. It integrates automated workflows for continuous integration and code quality management, ensuring that all code changes are validated and dependencies are kept up-to-date. The project manages the conversion of various file types—including DOCX, RTF, and multimedia formats—by utilizing specialized converters and utilities that accurately handle complex content, such as mathematical expressions and structured data. By orchestrating comprehensive testing and documentation generation, MarkItDown enhances maintainability and usability, ultimately providing a cohesive solution for users seeking efficient Markdown conversion capabilities.
+The **MarkItDown** project implements a robust framework for converting diverse document formats and web content into Markdown, streamlining the transformation process through a command-line interface and plugin architecture. The project contains a `.github` directory that manages automated processes for dependency updates and documentation generation, alongside a `github/workflows` directory that implements continuous integration and quality assurance workflows. It includes a `markitdown_sample_plugin` directory that provides RTF to Markdown conversion capabilities and a comprehensive suite of converters for various document and media formats. Additionally, the project organizes extensive testing frameworks to ensure the reliability and correctness of its functionalities across multiple input formats.
 
 ---
 
@@ -29,63 +29,17 @@ Documentation for files in the repository root:
 
 ## 📂 Documentation by Directory
 
-Browse documentation organized by source code directories:
+Browse the top-level directories below. Navigate into each directory for complete subdirectory listings.
 
 ### 📁 github/
 
 - **[github/github/](github/README.md)**  
-  _The `.github` directory implements automated processes for dependency management and documentation generation within a GitHub repository. It manages dependency updates for GitHub Actions through Dependabot, ensuring that all dependencies remain current on a weekly schedule. Additionally, it provides configuration for the Woden DocBot, which automates the generation of documentation based on pull requests, facilitating streamlined documentation practices and enhancing project maintainability._  
+  _The `.github` directory manages automated processes for dependency updates and documentation generation within a GitHub repository. It implements configuration settings for Dependabot to monitor and update dependencies, specifically focusing on GitHub Actions, while also providing a framework for the Woden DocBot to automate the creation and management of documentation. Together, these files streamline project maintenance and enhance documentation workflows, ensuring that both dependencies and documentation remain current and well-organized._  
   (2 documented files)
 
 - **[github/workflows/](github/workflows/README.md)**  
-  _The `github/workflows` directory implements automated workflows for continuous integration and code quality management within GitHub. It manages the pre-commit checks and testing processes by defining workflows that trigger on pull request events, ensuring that code quality is maintained and that all tests are executed before merging changes into the main branch. Through these workflows, it provides a structured environment for code validation and testing, enhancing the overall development workflow._  
+  _The `github/workflows` directory implements automated workflows for continuous integration and quality assurance within a GitHub repository. It manages pre-commit checks and testing processes by defining workflows that are triggered on pull requests, ensuring code quality through environment setup, dependency installation, and execution of pre-commit hooks and tests across multiple Python versions. This directory provides a structured approach to maintain code integrity and facilitate collaborative development._  
   (2 documented files)
-
-
-### 📁 packages/
-
-- **[packages/markitdown-mcp/src/markitdown_mcp/](packages/markitdown-mcp/src/markitdown_mcp/README.md)**  
-  _The `markitdown_mcp` directory implements a Markdown conversion server utilizing the MarkItDown library, providing functionality for transforming resources into Markdown format. It manages versioning information through the `__about__.py` file, which defines the package version, while the `__init__.py` file exposes this version as a public attribute for user access. The `__main__.py` file handles server initialization and command-line argument parsing, enabling operation in both Streamable HTTP and standard input/output modes for flexible resource processing._  
-  (3 documented files)
-
-- **[packages/markitdown-mcp/tests/](packages/markitdown-mcp/tests/README.md)**  
-  _Directory Summary: 
-
-The `packages/markitdown-mcp/tests` directory manages the testing framework for the `markitdown-mcp` project. It provides the necessary structure for organizing test cases and ensures compliance with licensing requirements through the inclusion of metadata in the `__init__.py` file. This directory is essential for maintaining code quality and validating functionality within the project._  
-  (1 documented file)
-
-- **[packages/markitdown-sample-plugin/src/markitdown_sample_plugin/](packages/markitdown-sample-plugin/src/markitdown_sample_plugin/README.md)**  
-  _The `markitdown_sample_plugin` directory implements a plugin for the MarkItDown framework that facilitates the conversion of RTF files into Markdown format. It manages versioning information through the `__about__.py` file, which defines the package version, and the `__init__.py` file, which establishes the public interface and exposes key components. Additionally, it handles the registration of document converters via the `_plugin.py` file, ensuring that the RtfConverter class is properly integrated into the MarkItDown processing pipeline._  
-  (3 documented files)
-
-- **[packages/markitdown-sample-plugin/tests/](packages/markitdown-sample-plugin/tests/README.md)**  
-  _The `packages/markitdown-sample-plugin/tests` directory implements unit testing for the `markitdown_sample_plugin` module, specifically focusing on the functionality of the `RtfConverter` class. It provides a structured environment for validating the integration of the plugin with the `MarkItDown` framework through comprehensive test cases that assert the correctness of the conversion process. This directory manages the testing lifecycle, ensuring that the plugin operates as intended by verifying output against expected results._  
-  (2 documented files)
-
-- **[packages/markitdown/src/markitdown/](packages/markitdown/src/markitdown/README.md)**  
-  _The `markitdown` directory implements a comprehensive framework for converting various document formats and web content into Markdown. It manages the conversion process through a command-line interface, handles file input and output options, and provides a structured approach to error handling with custom exceptions. Additionally, it encapsulates metadata, manages the public API, and facilitates plugin integration for extensibility, ensuring a cohesive and user-friendly experience for Markdown conversion tasks._  
-  (8 documented files)
-
-- **[packages/markitdown/src/markitdown/converter_utils/](packages/markitdown/src/markitdown/converter_utils/README.md)** - 1 documented file
-- **[packages/markitdown/src/markitdown/converter_utils/docx/](packages/markitdown/src/markitdown/converter_utils/docx/README.md)**  
-  _The `packages/markitdown/src/markitdown/converter_utils/docx` directory implements functionality for processing and converting DOCX files, specifically targeting the transformation of Office Math Markup Language (OMML) elements into LaTeX format. It manages the extraction and modification of XML content within DOCX files, ensuring that mathematical equations are accurately represented in LaTeX before re-packaging the files into the DOCX format. This directory provides essential utilities for integrating LaTeX representations into DOCX documents, enhancing their mathematical content capabilities._  
-  (2 documented files)
-
-- **[packages/markitdown/src/markitdown/converter_utils/docx/math/](packages/markitdown/src/markitdown/converter_utils/docx/math/README.md)**  
-  _The `math` directory implements functionality for converting mathematical expressions between Unicode and LaTeX formats. It provides a comprehensive mapping system for Unicode characters to their LaTeX equivalents through `latex_dict.py`, while `omml.py` handles the processing of Office Math Markup Language (OMML) elements, facilitating their conversion into LaTeX syntax. Together, these files manage the translation of mathematical notation, ensuring accurate representation across different formats._  
-  (3 documented files)
-
-- **[packages/markitdown/src/markitdown/converters/](packages/markitdown/src/markitdown/converters/README.md)**  
-  _The `packages/markitdown/src/markitdown/converters` directory implements a comprehensive suite of converters that handle the transformation of various document formats into Markdown. It provides specialized classes for converting audio, video, images, documents, and structured data formats such as CSV and Excel, ensuring that each type is processed according to its unique requirements. This directory manages the extraction of content and metadata from diverse sources, including HTML, RSS feeds, and Jupyter Notebooks, while maintaining the integrity of the original formatting wherever possible._  
-  (23 documented files)
-
-- **[packages/markitdown/tests/](packages/markitdown/tests/README.md)**  
-  _The `packages/markitdown/tests` directory implements a comprehensive suite of tests for the `markitdown` package, ensuring the reliability and correctness of its functionalities. It manages various testing scenarios, including command-line interface validation, file type handling, and conversion processes, through structured test cases that utilize classes and functions to standardize input and expected outcomes. This directory provides essential coverage for both the core features and edge cases of the package, facilitating robust development and maintenance practices._  
-  (7 documented files)
-
-- **[packages/markitdown/tests/test_files/](packages/markitdown/tests/test_files/README.md)**  
-  _The directory `packages/markitdown/tests/test_files` provides a collection of HTML documents designed for testing the rendering and functionality of web content formats. It implements structured layouts for various types of content, including a blog post and a Wikipedia-style page, ensuring that metadata, navigation, and content organization are effectively managed for optimal user experience and search engine visibility. This directory serves as a resource for validating the presentation and interaction of web documents within the Markitdown package._  
-  (3 documented files)
 
 
 ---
@@ -99,4 +53,4 @@ The `packages/markitdown-mcp/tests` directory manages the testing framework for 
 ---
 
 *Documentation automatically generated by [AI Document Creator](https://github.com/marketplace/ai-document-creator)*
-*Last updated: 2025-12-23 16:00 UTC*
+*Last updated: 2026-01-04 17:33 UTC*

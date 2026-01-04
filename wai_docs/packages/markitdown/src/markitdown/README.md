@@ -4,7 +4,7 @@
 
 ## 📋 Directory Overview
 
-The `markitdown` directory implements a comprehensive framework for converting various document formats and web content into Markdown. It manages the conversion process through a command-line interface, handles file input and output options, and provides a structured approach to error handling with custom exceptions. Additionally, it encapsulates metadata, manages the public API, and facilitates plugin integration for extensibility, ensuring a cohesive and user-friendly experience for Markdown conversion tasks.
+The `markitdown` directory implements a comprehensive framework for converting various document formats into Markdown. It manages versioning, initializes core components, and provides a command-line interface for user interaction. The directory handles document conversion processes through a robust set of classes and exception management, while also facilitating the registration and loading of different document converters. Additionally, it processes file and data URIs to ensure seamless integration with various input sources.
 
 ## 📁 Subdirectories
 
@@ -17,14 +17,14 @@ This directory contains the following subdirectories:
 
 This directory contains the following documented files:
 
-- **[__about__.py](__about__.py.md)** - Documentation for __about__.py
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[__main__.py](__main__.py.md)** - Documentation for __main__.py
-- **[_base_converter.py](_base_converter.py.md)** - Documentation for _base_converter.py
-- **[_exceptions.py](_exceptions.py.md)** - Documentation for _exceptions.py
-- **[_markitdown.py](_markitdown.py.md)** - Documentation for _markitdown.py
-- **[_stream_info.py](_stream_info.py.md)** - Documentation for _stream_info.py
-- **[_uri_utils.py](_uri_utils.py.md)** - Documentation for _uri_utils.py
+- **[__about__.py](__ABOUT__.PY.md)** - Documentation for __about__.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[__main__.py](__MAIN__.PY.md)** - Documentation for __main__.py
+- **[_base_converter.py](_BASE_CONVERTER.PY.md)** - Documentation for _base_converter.py
+- **[_exceptions.py](_EXCEPTIONS.PY.md)** - Documentation for _exceptions.py
+- **[_markitdown.py](_MARKITDOWN.PY.md)** - Documentation for _markitdown.py
+- **[_stream_info.py](_STREAM_INFO.PY.md)** - Documentation for _stream_info.py
+- **[_uri_utils.py](_URI_UTILS.PY.md)** - Documentation for _uri_utils.py
 
 ---
 
