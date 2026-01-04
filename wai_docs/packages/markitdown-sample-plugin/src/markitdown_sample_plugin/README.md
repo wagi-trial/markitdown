@@ -4,15 +4,15 @@
 
 ## 📋 Directory Overview
 
-The `markitdown_sample_plugin` directory implements a plugin for the MarkItDown framework that facilitates the conversion of RTF files into Markdown format. It manages versioning information through the `__about__.py` file, which defines the package version, and the `__init__.py` file, which establishes the public interface and exposes key components. Additionally, it handles the registration of document converters via the `_plugin.py` file, ensuring that the RtfConverter class is properly integrated into the MarkItDown processing pipeline.
+The `markitdown_sample_plugin` directory implements a plugin for the MarkItDown framework that provides RTF (Rich Text Format) to Markdown conversion capabilities. It manages the integration of conversion functionality through the registration of converters and the definition of an RtfConverter class, facilitating seamless processing of RTF files into Markdown format. Additionally, it handles the initialization of the package by exposing essential components for external use, ensuring a cohesive interface for users.
 
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[__about__.py](__about__.py.md)** - Documentation for __about__.py
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[_plugin.py](_plugin.py.md)** - Documentation for _plugin.py
+- **[__about__.py](__ABOUT__.PY.md)** - Documentation for __about__.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[_plugin.py](_PLUGIN.PY.md)** - Documentation for _plugin.py
 
 ---
 
