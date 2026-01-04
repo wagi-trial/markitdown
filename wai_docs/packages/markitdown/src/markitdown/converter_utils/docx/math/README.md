@@ -4,15 +4,15 @@
 
 ## 📋 Directory Overview
 
-The `math` directory implements functionality for converting mathematical expressions between Unicode and LaTeX formats. It provides a comprehensive mapping system for Unicode characters to their LaTeX equivalents through `latex_dict.py`, while `omml.py` handles the processing of Office Math Markup Language (OMML) elements, facilitating their conversion into LaTeX syntax. Together, these files manage the translation of mathematical notation, ensuring accurate representation across different formats.
+The `math` directory within `packages/markitdown/src/markitdown/converter_utils/docx` implements functionality for converting mathematical content from Office Math Markup Language (OMML) to LaTeX format. It provides mappings between Unicode characters and their LaTeX representations, specifically for mathematical symbols and accents, while also handling the parsing and processing of OMML data to ensure accurate conversion. Together, these components facilitate seamless integration of mathematical expressions into LaTeX documents.
 
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[latex_dict.py](latex_dict.py.md)** - Documentation for latex_dict.py
-- **[omml.py](omml.py.md)** - Documentation for omml.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[latex_dict.py](LATEX_DICT.PY.md)** - Documentation for latex_dict.py
+- **[omml.py](OMML.PY.md)** - Documentation for omml.py
 
 ---
 
