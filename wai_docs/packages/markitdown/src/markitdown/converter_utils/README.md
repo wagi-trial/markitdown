@@ -12,7 +12,7 @@ This directory contains the following subdirectories:
 
 This directory contains the following documented files:
 
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
 
 ---
 
