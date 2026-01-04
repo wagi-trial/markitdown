@@ -2,17 +2,13 @@
 
 > Directory index for `packages/markitdown-mcp/src/markitdown_mcp`
 
-## 📋 Directory Overview
-
-The `markitdown_mcp` directory implements a Markdown conversion server utilizing the MarkItDown library, providing functionality for transforming resources into Markdown format. It manages versioning information through the `__about__.py` file, which defines the package version, while the `__init__.py` file exposes this version as a public attribute for user access. The `__main__.py` file handles server initialization and command-line argument parsing, enabling operation in both Streamable HTTP and standard input/output modes for flexible resource processing.
-
 ## 📄 Files in this Directory
 
 This directory contains the following documented files:
 
-- **[__about__.py](__about__.py.md)** - Documentation for __about__.py
-- **[__init__.py](__init__.py.md)** - Documentation for __init__.py
-- **[__main__.py](__main__.py.md)** - Documentation for __main__.py
+- **[__about__.py](__ABOUT__.PY.md)** - Documentation for __about__.py
+- **[__init__.py](__INIT__.PY.md)** - Documentation for __init__.py
+- **[__main__.py](__MAIN__.PY.md)** - Documentation for __main__.py
 
 ---
 
